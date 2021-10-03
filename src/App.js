@@ -1,7 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
+  let audio = new Audio("music/happy-birthday.mp3");
+  const start = () => {
+    audio.play();
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -18,6 +23,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <button onClick={start}>Play</button>
     </div>
   );
 }
