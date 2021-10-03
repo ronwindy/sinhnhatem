@@ -297,4 +297,84 @@
   .step-3 .icons .row span:nth-child(even) {
     animation-duration: 0.7s;
   }
+
+  a,
+  a:hover {
+    text-decoration: none;
+  }
+
+  .trendy_btn {
+    display: block;
+    margin: 5% auto;
+    padding: 18px;
+    text-align: center;
+  }
+
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  span.txt {
+    display: block;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* code button TWO (like Lover) */
+
+  a.button_two {
+    position: relative;
+    overflow: hidden;
+    width: 260px;
+    font-size: 1.4em;
+    font-weight: 700;
+    background-color: #b52122;
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.7);
+  }
+
+  a.button_two:hover {
+    background-color: #d33031;
+  }
+
+  a.button_two:active {
+    top: 1px;
+    -o-transition: none;
+    -ms-transition: none;
+    -moz-transition: none;
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  a.button_two:before {
+    display: inline-block;
+    position: absolute;
+    z-index: 1;
+    width: 320px;
+    top: -50%;
+    left: -5%;
+    font-size: 1.375em;
+    font-family: "fontello";
+    content: "\2665  \2665  \2665  \2665  \2665  \2665  \2665  \2665  \2665  \2665  \2665  \2665  \2665  \2665  \2665  \2665  \2665  \2665  \2665  \2665  \2665  \2665  \2665  \2665  \2665  \2665  \2665  \2665  \2665  \2665  \2665  \2665  \2665  \2665  \2665  \2665  \2665  \2665  \2665  \2665  \2665  \2665";
+    color: #8c1f20;
+    text-shadow: none;
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+
+  a.button_two span.txt:before {
+    display: inline-block;
+    margin: 0 10px 0 0;
+    font-family: "fontello";
+    content: "\2665";
+    color: #fff;
+  }
 }

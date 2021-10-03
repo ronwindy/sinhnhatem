@@ -1,12 +1,6 @@
-import { useEffect } from "react";
 import "./Gift.scss";
 
 function Gift() {
-  useEffect(() => {
-    let audio = new Audio("music/happy-birthday.mp3");
-    audio.play();
-  }, []);
-
   return (
     <div className="gift-container">
       <div id="merrywrap" className="merrywrap">
@@ -45,6 +39,15 @@ function Gift() {
             <span>!</span>
             <span>!</span>
             <span>!</span>
+          </div>
+          <div className="trendy-btn-container">
+            <a
+              className="trendy_btn button_two radius shadow"
+              href=""
+              title="Button Two"
+            >
+              <span className="txt">Click đây nào</span>
+            </a>
           </div>
         </div>
       </div>
