@@ -1,6 +1,7 @@
 import Gift from "./Gift.js";
 import Slideshow from "./Slideshow.js";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Letter from "./Letter.js";
 
 function App() {
   return (
@@ -12,6 +13,9 @@ function App() {
           </Route>
           <Route path="/gift">
             <Gift />
+          </Route>
+          <Route path="/letter">
+            <Letter />
           </Route>
           <Route path="/">
             <Gift />

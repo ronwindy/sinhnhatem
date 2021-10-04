@@ -15,7 +15,7 @@ function Slideshow() {
       <div className="trendy-btn-container">
         <Link
           className="trendy_btn button_two radius shadow"
-          to="/slideshow"
+          to="/letter"
           title="Button Two"
         >
           <span className="txt">Xem xong click đây nghen 😘</span>

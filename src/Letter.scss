@@ -1,0 +1,16 @@
+.letter-container {
+  background-image: url("./images/background-letter.png");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  font-family: "Waiting for the Sunrise", cursive;
+  font-size: 30px;
+  letter-spacing: 6px;
+  font-weight: bold;
+
+  #typedtext {
+    padding: 5% 10%;
+  }
+}
