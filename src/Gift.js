@@ -1,4 +1,5 @@
 import "./Gift.scss";
+import { Link } from "react-router-dom";
 
 function Gift() {
   return (
@@ -29,6 +30,7 @@ function Gift() {
             <span className="letter">y</span>
           </div>
           <div className="row">
+            <span>🎈</span>
             <span>E</span>
             <span>m</span>
             <span className="letter">&nbsp;</span>
@@ -36,19 +38,18 @@ function Gift() {
             <span>ê</span>
             <span>u</span>
             <span className="letter">&nbsp;</span>
-            <span>!</span>
-            <span>!</span>
-            <span>!</span>
+            <span>🎈</span>
+            <span>🎉</span>
           </div>
-          <div className="trendy-btn-container">
-            <a
-              className="trendy_btn button_two radius shadow"
-              href=""
-              title="Button Two"
-            >
-              <span className="txt">Click đây nào</span>
-            </a>
-          </div>
+        </div>
+        <div className="trendy-btn-container">
+          <Link
+            className="trendy_btn button_two radius shadow"
+            to="/slideshow"
+            title="Button Two"
+          >
+            <span className="txt">Click đây nào</span>
+          </Link>
         </div>
       </div>
     </div>

@@ -298,8 +298,8 @@
     animation-duration: 0.7s;
   }
 
-  a,
-  a:hover {
+  .trendy_btn,
+  .trendy_btn:hover {
     text-decoration: none;
   }
 
@@ -327,7 +327,7 @@
 
   /* code button TWO (like Lover) */
 
-  a.button_two {
+  .trendy_btn.button_two {
     position: relative;
     overflow: hidden;
     width: 260px;
@@ -338,11 +338,11 @@
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.7);
   }
 
-  a.button_two:hover {
+  .trendy_btn.button_two:hover {
     background-color: #d33031;
   }
 
-  a.button_two:active {
+  .trendy_btn.button_two:active {
     top: 1px;
     -o-transition: none;
     -ms-transition: none;
@@ -351,7 +351,7 @@
     transition: none;
   }
 
-  a.button_two:before {
+  .trendy_btn.button_two:before {
     display: inline-block;
     position: absolute;
     z-index: 1;
@@ -370,7 +370,7 @@
     transform: rotate(-10deg);
   }
 
-  a.button_two span.txt:before {
+  .trendy_btn.button_two span.txt:before {
     display: inline-block;
     margin: 0 10px 0 0;
     font-family: "fontello";
