@@ -44,47 +44,5 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    <script>
-      window.onload = function () {
-        var merrywrap = document.getElementById("merrywrap");
-        var box = merrywrap.getElementsByClassName("giftbox")[0];
-        var trendyButtonContainer = document.getElementsByClassName(
-          "trendy-btn-container"
-        )[0];
-        trendyButtonContainer.style.visibility = "hidden";
-        var step = 1;
-        var stepMinutes = [2000, 2000, 1000, 1000];
-        function init() {
-          box.addEventListener("click", openBox, false);
-        }
-        function stepClass(step) {
-          merrywrap.className = "merrywrap";
-          merrywrap.className = "merrywrap step-" + step;
-        }
-        function openBox() {
-          if (step === 1) {
-            box.removeEventListener("click", openBox, false);
-          }
-          stepClass(step);
-          if (step === 2) {
-            let audio = new Audio("music/happy-birthday.mp3");
-            audio.play();
-          }
-
-          if (step === 3) {
-          }
-          if (step === 4) {
-            trendyButtonContainer.style.visibility = "visible";
-            trendyButtonContainer.style.zIndex = 1;
-            trendyButtonContainer.style.animation = "fadein 2s";
-            return;
-          }
-          setTimeout(openBox, stepMinutes[step - 1]);
-          step++;
-        }
-
-        init();
-      };
-    </script>
   </body>
 </html>

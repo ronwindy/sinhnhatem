@@ -1,7 +1,64 @@
 import "./Gift.scss";
 import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
 
 function Gift() {
+  useEffect(() => {
+    const script = document.createElement("script");
+
+    script.innerHTML = `
+      var merrywrap = document.getElementById("merrywrap");
+      var box = merrywrap.getElementsByClassName("giftbox")[0];
+      var trendyButtonContainer = document.getElementsByClassName(
+        "trendy-btn-container"
+      )[0];
+      trendyButtonContainer.style.visibility = "hidden";
+      var step = 1;
+      var stepMinutes = [2000, 2000, 1000, 1000];
+      function init() {
+        box.addEventListener("click", openBox, false);
+      }
+      function stepClass(step) {
+        merrywrap.className = "merrywrap";
+        merrywrap.className = "merrywrap step-" + step;
+      }
+      function openBox() {
+        if (step === 1) {
+          box.removeEventListener("click", openBox, false);
+        }
+        stepClass(step);
+        if (step === 2) {
+          let audio = new Audio("music/happy-birthday.mp3");
+          audio.play();
+        }
+
+        if (step === 3) {
+        }
+        if (step === 4) {
+          trendyButtonContainer.style.visibility = "visible";
+          trendyButtonContainer.style.zIndex = 1;
+          trendyButtonContainer.style.opacity = 0;
+          trendyButtonContainer.style.animation = "fadein 2s";
+          trendyButtonContainer.style.animationDelay = "10s";
+          trendyButtonContainer.style.animationFillMode = "forwards";
+          return;
+        }
+        setTimeout(openBox, stepMinutes[step - 1]);
+        step++;
+      }
+
+      init();
+    `;
+
+    script.async = true;
+
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <div className="gift-container">
       <div id="merrywrap" className="merrywrap">
