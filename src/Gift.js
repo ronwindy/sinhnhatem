@@ -1,6 +1,7 @@
 import "./Gift.scss";
 import { Link } from "react-router-dom";
 import React, { useEffect } from "react";
+import { Fireworks } from "fireworks/lib/react";
 
 function Gift() {
   useEffect(() => {
@@ -59,8 +60,22 @@ function Gift() {
     };
   }, []);
 
+  let fxProps = {
+    count: 3,
+    interval: 200,
+    bubbleSizeMaximum: 1,
+    bubbleSpeedMaximum: 10,
+    colors: ["#FE8F8F", "#FCD2D1", "#FFEDD3"],
+    calc: (props, i) => ({
+      ...props,
+      x: (i + 1) * (window.innerWidth / 3) - (i + 1) * 100,
+      y: 200 + Math.random() * 100 - 50 + (i === 2 ? -80 : 0),
+    }),
+  };
+
   return (
     <div className="gift-container">
+      <Fireworks {...fxProps} />
       <div id="merrywrap" className="merrywrap">
         <canvas id="snowfall"></canvas>
         <div className="giftbox">
